@@ -1,0 +1,1 @@
+tell application "System Events" to tell process "Google Chrome"	keystroke "f" using {command down, control down}end tell

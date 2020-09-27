@@ -1,0 +1,51 @@
+{
+  // 基本設定
+  "workbench.iconTheme": "vscode-great-icons",
+  "workbench.colorTheme": "Solarized Dark",
+  "editor.tabSize": 2,
+  "editor.rulers": [
+    80
+  ],
+  "editor.wordWrapColumn": 80,
+  "editor.wordWrap": "bounded",
+  "editor.minimap.enabled": false,
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "files.trimTrailingWhitespace": true,
+  "explorer.confirmDelete": false,
+  "git.confirmSync": false,
+  // eslint, prettier
+  "vetur.validation.template": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.packageManager": "yarn",
+  "eslint.workingDirectories": [
+    "./front"
+  ],
+  // rubocop
+  "ruby.rubocop.configFilePath": "/Users/kenya/auto_schedule/back/.rubocop.yml",
+  // spell check
+  "cSpell.userWords": [
+    "mariadb",
+    "nuxt"
+  ],
+  "cSpell.enableFiletypes": [
+    "!c",
+    "!cpp",
+    "!csharp",
+    "!jade",
+    "!latex",
+    "!less",
+    "!php",
+    "!plaintext",
+    "!pug",
+    "!python",
+    "!restructuredtext",
+    "!rust",
+    "!scala",
+    "ruby",
+    "sql",
+    "vue"
+  ],
+  "cSpell.language": "en",
+}

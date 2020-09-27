@@ -1,0 +1,58 @@
+<html>
+  <section>
+    <div class='title'>パスワード入力/入力文字数制限/初期値表示</div>
+    <div>&lt;input type="password" maxlength="8" placeholder="パスワードを入力をどうぞ" &gt;</div>
+    <br>
+    <input type='password' size='35' maxlength='8' placeholder='パスワード入力してね！'>
+  </section>
+  <section>
+    <div class='title'>入力補完</div>
+    <div>&lt;input autocomplete="on" list="keywords"&gt;</div>
+    <div>&lt;datalist id="keywords"&gt;</div>
+    <div>　&lt;option value="スーパーマーケット"&gt;</div>
+    <div>　&lt;option value="スーパーマリオブラザーズ"&gt;</div>
+    <div>　&lt;option value="スーパードライ"&gt;</div>
+    <div>&lt;/datalist&gt;</div>
+    <br>
+    <input autocomplete="on" list="keywords" size='35'>
+    <datalist id="keywords">
+      <option value="スーパーマーケット">
+      <option value="スーパーマリオブラザーズ">
+      <option value="スーパードライ">
+    </datalist>
+  </section>
+  <section>
+    <div class='title'>入力文字制限</div>
+    <div>&lt;input pattern="^[0-9A-Za-z]+$"&gt; ※半角英数</div>
+    <br>
+    <input pattern="^[0-9A-Za-z]+$"> ※半角英数
+  </section>
+  <section>
+    <div class='title'>入力必須</div>
+    <div>&lt;input required&gt; ※入力必須</div>
+    <br>
+   <input required> ※入力必須
+  </section>
+  <section>
+    <div class='title'>オートフォーカス</div>
+    <div>&lt;input autofocus&gt;</div>
+    <br>
+   <input autofocus>
+  </section>
+  <style>
+    section {
+      padding: 10px;
+      margin: 15px;
+      border: 1px solid black;
+      width: 70%;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+    }
+    div.title {
+      color: blue;
+      font-size: large;
+      font-weight: bold;
+    }
+  </style>
+</html>
