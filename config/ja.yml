@@ -1,0 +1,42 @@
+ja:
+  activerecord:
+    errors:
+      models:
+        schedule:
+          attributes:
+            # belongs_toでのvalidtion
+            user:
+              required: "ログインまたは登録をしてください"
+    models:
+      user: ユーザー
+      schedule: スケジュール
+      event: イベント
+    attributes:
+      user:
+        id: ID
+        email: メールアドレス
+        password: パスワード
+        isPublic: 公開設定
+        created_at: 登録日時
+        updated_at: 更新日時
+        schedules: スケジュール
+      schedule:
+        id: ID
+        comment: コメント
+        start_time: 開始時間
+        schedule_date: 予定日
+        user_id: ユーザーID
+        created_at: 登録日時
+        updated_at: 更新日時
+        user: ユーザー
+        events: イベント
+      event:
+        id: ID
+        event_name: イベント名
+        note: ノート
+        unit: 予定時間
+        order: 順番
+        schedule: スケジュール
+        schedule_id: スケジュールID
+        created_at: 登録日時
+        updated_at: 更新日時
