@@ -26,8 +26,10 @@
   "ruby.rubocop.configFilePath": "/Users/kenya/auto_schedule/back/.rubocop.yml",
   // spell check
   "cSpell.userWords": [
+    "Mercari",
     "mariadb",
-    "nuxt"
+    "nuxt",
+    "webdriver"
   ],
   "cSpell.enableFiletypes": [
     "!c",
@@ -48,4 +50,20 @@
     "vue"
   ],
   "cSpell.language": "en",
+  "files.associations": {
+    "*.erb": "erb"
+  },
+  "emmet.includeLanguages": {
+    "erb": "html"
+  },
+  "todo-tree.tree.showScanModeButton": false,
+  "workbench.panel.defaultLocation": "right",
+  "editor.fontFamily": "Menlo, monospace, ricty diminished",
+  "explorer.confirmDragAndDrop": false,
+  "editor.acceptSuggestionOnEnter": "off",
+  "editor.scrollBeyondLastLine": false,
+  "editor.padding.bottom": 100,
+  "window.zoomLevel": -1, // 拡大率
+  "editor.fontSize": 15, //  文字サイズ
+  "editor.lineHeight": 20,
 }
