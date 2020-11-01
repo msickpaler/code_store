@@ -3,9 +3,7 @@
   "workbench.iconTheme": "vscode-great-icons",
   "workbench.colorTheme": "Solarized Dark",
   "editor.tabSize": 2,
-  "editor.rulers": [
-    80
-  ],
+  "editor.rulers": [80],
   "editor.wordWrapColumn": 80,
   "editor.wordWrap": "bounded",
   "editor.minimap.enabled": false,
@@ -13,23 +11,54 @@
   "files.trimTrailingWhitespace": true,
   "explorer.confirmDelete": false,
   "git.confirmSync": false,
+  "todo-tree.tree.showScanModeButton": false,
+  "workbench.panel.defaultLocation": "right",
+  "editor.fontFamily": "Menlo, monospace, ricty diminished",
+  "explorer.confirmDragAndDrop": false,
+  "editor.acceptSuggestionOnEnter": "off",
+  "editor.scrollBeyondLastLine": false,
+  "editor.padding.bottom": 100,
+  "window.zoomLevel": -1, // 拡大率
+  "editor.fontSize": 15, //  文字サイズ
+  "editor.lineHeight": 20, // 行間
+
   // eslint, prettier
-  "vetur.validation.template": false,
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  },
   "eslint.packageManager": "yarn",
+  "vetur.format.defaultFormatter.js": "prettier-eslint",
+  "[vue]": { // 小文字じゃないとだめ！！！
+    "editor.formatOnPaste": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+  },
+  "vetur.validation.template": false,
   "eslint.workingDirectories": [
-    "./front"
+    "./front" // userから消す
   ],
+
   // rubocop
+  "[ruby]": {
+    "editor.formatOnSave": true
+  },
+  // userから消す
   "ruby.rubocop.configFilePath": "/Users/kenya/auto_schedule/back/.rubocop.yml",
+
+  // erb
+  "files.associations": {
+    "*.erb": "erb",
+  },
+  "emmet.includeLanguages": {
+    "erb": "html"
+  },
+
+  "[markdown]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   // spell check
   "cSpell.userWords": [
-    "Mercari",
     "mariadb",
     "nuxt",
-    "webdriver"
   ],
   "cSpell.enableFiletypes": [
     "!c",
@@ -50,20 +79,4 @@
     "vue"
   ],
   "cSpell.language": "en",
-  "files.associations": {
-    "*.erb": "erb"
-  },
-  "emmet.includeLanguages": {
-    "erb": "html"
-  },
-  "todo-tree.tree.showScanModeButton": false,
-  "workbench.panel.defaultLocation": "right",
-  "editor.fontFamily": "Menlo, monospace, ricty diminished",
-  "explorer.confirmDragAndDrop": false,
-  "editor.acceptSuggestionOnEnter": "off",
-  "editor.scrollBeyondLastLine": false,
-  "editor.padding.bottom": 100,
-  "window.zoomLevel": -1, // 拡大率
-  "editor.fontSize": 15, //  文字サイズ
-  "editor.lineHeight": 20,
 }
