@@ -53,8 +53,10 @@
 
   "[markdown]": {
     "editor.formatOnSave": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.quickSuggestions": true,
   },
+
   // spell check
   "cSpell.userWords": [
     "mariadb",
