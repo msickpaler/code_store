@@ -4,7 +4,7 @@
 
 ## as_json
 
-code
+examples
 
 ```ruby
 
@@ -33,9 +33,10 @@ user.as_json
 ```
 
 link
-[ActiveModel as_json のオプション一覧](https://qiita.com/tmak_tsukamoto/items/b45cdc3ad6a0607534cb)
-[rdoc Active Model JSON Serializer](https://api.rubyonrails.org/classes/ActiveModel/Serializers/JSON.html#method-i-as_json)
-[Rails の as_json をもうちょっと便利に使うオプション](https://qiita.com/tbaba/items/ea44025b056f708ab0b4)
+
+- [ActiveModel as_json のオプション一覧](https://qiita.com/tmak_tsukamoto/items/b45cdc3ad6a0607534cb)
+- [rdoc Active Model JSON Serializer](https://api.rubyonrails.org/classes/ActiveModel/Serializers/JSON.html#method-i-as_json)
+- [Rails の as_json をもうちょっと便利に使うオプション](https://qiita.com/tbaba/items/ea44025b056f708ab0b4)
 
 notes
 
