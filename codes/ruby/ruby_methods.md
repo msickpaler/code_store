@@ -48,6 +48,38 @@ notes
 
 ---
 
+## count
+
+examples
+
+```ruby
+# String
+ary = [1, 2, 4, 2]
+ary.count             # => 4
+ary.count(2)          # => 2
+ary.count{|x|x%2==0}  # => 3
+```
+
+```ruby
+# Enumerable
+p 'abcdefg'.count('c')               # => 1
+p '123456789'.count('2378')          # => 4
+
+# 複数指定はAND条件
+p '123456789'.count('2-8', '^4-6')   # => 4 (2,3,7,8)
+```
+
+link
+
+- [Enumerable count reference](https://docs.ruby-lang.org/ja/latest/method/Enumerable/i/count.html)
+- [String count reference](https://docs.ruby-lang.org/ja/latest/method/String/i/count.html)
+
+notes
+
+- 一致は == で判定
+
+---
+
 ## sub
 
 examples
