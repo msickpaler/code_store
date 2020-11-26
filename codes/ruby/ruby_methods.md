@@ -46,8 +46,6 @@ notes
 
 - size は length のエイリアス
 
----
-
 ## count
 
 examples

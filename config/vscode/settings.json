@@ -7,7 +7,6 @@
   "editor.wordWrapColumn": 80,
   "editor.wordWrap": "bounded",
   "editor.minimap.enabled": false,
-  "editor.suggest.snippetsPreventQuickSuggestions": false,
   "files.trimTrailingWhitespace": true,
   "explorer.confirmDelete": false,
   "git.confirmSync": false,
@@ -21,11 +20,20 @@
   "window.zoomLevel": -1, // 拡大率
   "editor.fontSize": 15, //  文字サイズ
   "editor.lineHeight": 20, // 行間
+  "editor.quickSuggestionsDelay": 1, // 予測変換が出る時間[ms]
+  // "editor.snippetSuggestions": "top", //snippetは予測変換の上に出る タグとか使いにくくなった
+  "editor.suggest.snippetsPreventQuickSuggestions": false, //スニペットは邪魔しない
 
   // eslint, prettier
   "eslint.packageManager": "yarn",
   "vetur.format.defaultFormatter.js": "prettier-eslint",
   "[vue]": { // 小文字じゃないとだめ！！！
+    "editor.formatOnPaste": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+  },
+  "[javascript]": {
     "editor.formatOnPaste": true,
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": true
@@ -37,8 +45,16 @@
   ],
 
   // rubocop
+
+  // このruby.lintをonにすると、警告メッセージが二重に表示される。
+  // "ruby.lint": {
+  //   "rubocop": true
+  // },
+
+  // "ruby.format": "rubocop",
   "[ruby]": {
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "misogi.ruby-rubocop"
   },
   // userから消す
   "ruby.rubocop.configFilePath": "/Users/kenya/auto_schedule/back/.rubocop.yml",
@@ -59,8 +75,15 @@
 
   // spell check
   "cSpell.userWords": [
+    "csrf",
+    "ipadic",
     "mariadb",
+    "mecab",
+    "natto",
+    "neologd",
     "nuxt",
+    "unprocessable",
+    "vuex"
   ],
   "cSpell.enableFiletypes": [
     "!c",
@@ -81,4 +104,6 @@
     "vue"
   ],
   "cSpell.language": "en",
+  "gitlens.views.repositories.files.layout": "tree",
+
 }
