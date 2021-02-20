@@ -1,0 +1,27 @@
+version: "3"
+services:
+  front:
+    image: 111111111111.dkr.ecr.ap-northeast-1.amazonaws.com/auto-schedule_front:latest
+    # x-aws-autoscaling:
+    #   memoryReservation: 300
+    deploy:
+      resources:
+        reservations:
+          memory: 300Mb
+    command: bash -c "yarn run build && yarn start"
+    environment:
+      BACK_HOST: http://0.0.0.0:3001
+      PROD_BACK_HOST: http://back:3001
+    ports:
+      - "3000:3000"
+    depends_on:
+      - back
+  back:
+    image: 111111111111.dkr.ecr.ap-northeast-1.amazonaws.com/auto-schedule_back:latest
+    command: rails s -p 3001 -b 0.0.0.0
+    environment:
+      RAILS_ENV: production
+      RAILS_MASTER_KEY: 11111111111
+      EDITOR: 'vim'
+    ports:
+      - "3001:3001"
