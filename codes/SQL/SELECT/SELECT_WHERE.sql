@@ -5,13 +5,12 @@
 -- old = 30;
 -- old <> 30; this means "not equal"
 --
-
 -- ORよりもANDの方が先に処理される。この場合、'東京の31以上'もしくは'大阪'という分け方になる
-select
+SELECT
   *
-from
+FROM
   friends
-where
+WHERE
   address = 'Tokyo'
   AND old >= 31
   OR address = 'Osaka';
@@ -32,3 +31,16 @@ FROM
 WHERE
   old BETWEEN 20
   AND 26;
+
+-- サブクエリ(where以外でも柔軟に使える)
+SELECT
+  *
+FROM
+  friends
+WHERE
+  old > (
+    SELECT
+      AVG(old)
+    FROM
+      friends
+  );
