@@ -14,6 +14,9 @@ fi
 
 eval `/usr/local/opt/coreutils/libexec/gnubin/dircolors ~/.dircolors-solarized/dircolors.ansi-dark`
 
+# デフォルトエディタの設定
+export EDITOR=vim
+
 # iterm
 # alias fin='a="Finale"; echo ${a:l}'
 alias fin='echo finale'
