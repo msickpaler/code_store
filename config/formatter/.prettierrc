@@ -1,5 +1,134 @@
 {
-  "semi": false,
-  "arrowParens": "always",
-  "singleQuote": true
+  // {
+  //   "semi": false,
+  //   "arrowParens": "always",
+  //   "singleQuote": true
+  // }
+  // 折り返す行の長さを指定 80
+  "printWidth": 80, // 80
+  // インデントのスペースの数を指定 2
+  "tabWidth": 2, // 2
+  // スペースではなくタブで行をインデントする false
+  "useTabs": false, // false
+  // ステートメントの最後にセミコロンを追加
+  "semi": true, // true
+
+  // ダブルクォートの代わりにシングルクォートを使用
+  // JSX quotesはこの項目を無視する
+  "singleQuote": false, // false
+
+  // ------------------------------
+  // オブジェクトのプロパティが引用されるときに変更
+
+  // //必要な場合にのみ、オブジェクトプロパティを引用符で囲む(デフォルト)
+  "quoteProps": "as-needed",
+
+  // //オブジェクトの少なくとも1つのプロパティに引用符が必要な場合は、すべてのプロパティを引用符で囲む
+  // "quoteProps": "consistent",
+
+  // //入力された引用符を尊重する
+  // "quoteProps": "preserve",
+  // ------------------------------
+
+  // JSXでダブルクォートの代わりにシングルクォートを使用
+  "jsxSingleQuote": false, // false
+
+  // ------------------------------
+  // 末尾のカンマの設定
+
+  //末尾にカンマをつけない(デフォルト)
+  // "trailingComma": "none",
+
+  //ES5で有効な末尾のカンマ(オブジェクト、配列など)
+  "trailingComma": "es5",
+
+  //可能な限り末尾にカンマを付ける(関数の引数含む) ※node 8かtransformが必要
+  // "trailingComma": "all",
+  // ------------------------------
+
+  // オブジェクトリテラルの角かっこの内側にスペースを入れる
+  "bracketSpacing": true, // true
+
+  // ------------------------------
+  // 複数行のJSX要素の最終行の最後に「>」を置く
+  // "jsxBracketSameLine": true,
+
+  //複数行のJSX要素の「>」hは次の行に置く(デフォルト)
+  "jsxBracketSameLine": false,
+  // ------------------------------
+
+  // アロー関数の()が省略可能でも常に書く 'always' or 'avoid'
+  "arrowParens": "avoid", // 'avoid'
+
+  // ファイルの一部のみフォーマットさせます。両方数値で指定。
+  "rangeStart": 0, // 0
+  "rangeEnd": Infinity, // Infinity
+
+  // 使用するパーサーを指定
+  // 入力ファイルパスから自動的に推測するから指定する必要がないらしい。
+  // "parser": "none",
+
+  // 使用するパーサーを推測するために使用するファイル名を指定
+  "filepath": "none",
+
+  // ファイルの先頭にプラグマ(/** @format */)を含むファイルのみをフォーマットするように指定
+  "requirePragma": false, // false
+
+  // ファイルの先頭にプラグマ(/** @format */)を挿入する
+  "insertPragma": false, // false
+
+  // ------------------------------
+  // markdownの折返しの設定
+
+  //そのまま折り返す(デフォルト)
+  "proseWrap": "preserve",
+
+  //Print Widthで指定した値を超える時は折り返す
+  // "proseWrap": "always" ,
+
+  //折り返さないしない
+  // "proseWrap": "never",
+  // ------------------------------
+
+  // ------------------------------
+  // HTMLファイルのグローバルな空白の感度を指定
+
+  //displayプロパティのデフォルト値を尊重(デフォルト)
+  "htmlWhitespaceSensitivity": "css",
+
+  //空白を区別する
+  // "htmlWhitespaceSensitivity": "strict",
+
+  //空白は区別しない
+  // "htmlWhitespaceSensitivity": "ignore",
+  // ------------------------------
+
+  // Vueファイル内の<script>と<style>をインデントするかどうかの指定
+  "vueIndentScriptAndStyle": false, // false
+
+  // ------------------------------
+  // 改行の文字コードを指定
+
+  //既存の行末を維持(デフォルト)
+  "endOfLine": "auto",
+
+  //Linux、MacOS、gitリポジトリで一般的な、ラインフィード(\n)のみ
+  // "endOfLine": "lf",
+
+  //Windowsで一般的な、キャリッジリターン + ラインフィード文字(\r\n)
+  // "endOfLine": "crlf",
+
+  //キャリッジリターン文字(\r)のみ
+  // "endOfLine": "cr",
+  // ------------------------------
+
+  // ------------------------------
+  // Prettierがファイルに埋め込まれた引用コードをフォーマットするかどうかを制御
+
+  //Prettierが自動的に識別できる場合、埋め込みコードをフォーマットする(デフォルト)
+  "embeddedLanguageFormatting": "auto",
+
+  //埋め込まれたコードを自動的にフォーマットしない
+  // "embeddedLanguageFormatting": "off",
+  // ------------------------------
 }
