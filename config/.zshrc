@@ -10,9 +10,19 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+autoload -Uz promptinit
+promptinit
+prompt sorin
+
 # Customize to your needs...
 
 eval `/usr/local/opt/coreutils/libexec/gnubin/dircolors ~/.dircolors-solarized/dircolors.ansi-dark`
+
+eval "$(gh completion -s zsh)"
+
+function history-all { history -E 1 }
+alias hist='history'
+alias hista='history-all'
 
 # デフォルトエディタの設定
 export EDITOR=vim
@@ -21,7 +31,9 @@ export EDITOR=vim
 # alias fin='a="Finale"; echo ${a:l}'
 alias fin='echo finale'
 
+
 # git
+alias gcd="git checkout develop"
 alias glt="git log --graph --pretty=format:'%x09%C(auto) %h %Cgreen %ar %Creset%x09by \"%C(cyan ul)%an%Creset\" %x09%C(auto)%s %d'"
 alias gp="git pull origin master"
 
@@ -76,7 +88,14 @@ alias drfsd='cd /Users/kenya/diary-app && dcud && docker-compose run --rm -p 80:
 alias drsd='cd /Users/kenya/diary-app && dcud && docker-compose run --rm -p 3001:3001 back'
 
 alias ls='gls --color=auto'
+alias lsd='ls -d */'
 alias rm='rm -i'
 alias ..='cd ..'
 alias mv='mv -i'
 alias cp='cp -i'
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/kenya/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/kenya/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/kenya/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/kenya/google-cloud-sdk/completion.zsh.inc'; fi
