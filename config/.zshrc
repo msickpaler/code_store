@@ -18,11 +18,24 @@ prompt sorin
 
 eval `/usr/local/opt/coreutils/libexec/gnubin/dircolors ~/.dircolors-solarized/dircolors.ansi-dark`
 
-eval "$(gh completion -s zsh)"
+# eval "$(gh completion -s zsh)"
 
+# zshrc
+alias zshrc='code Users/kenya/.zshrc'
+
+# 履歴
 function history-all { history -E 1 }
 alias hist='history'
 alias hista='history-all'
+
+# 入力を引数として、それから始まるコマンドを履歴から補完できる。
+# ここからーーーーーーーーーーー
+autoload history-search-end
+zle -N history-beginning-search-backward-end history-search-end
+zle -N history-beginning-search-forward-end history-search-end
+bindkey "^p" history-beginning-search-backward-end
+bindkey "^n" history-beginning-search-forward-end
+# ここまでーーーーーーーーーーー
 
 # デフォルトエディタの設定
 export EDITOR=vim
@@ -31,11 +44,9 @@ export EDITOR=vim
 # alias fin='a="Finale"; echo ${a:l}'
 alias fin='echo finale'
 
-
 # git
-alias gcd="git checkout develop"
 alias glt="git log --graph --pretty=format:'%x09%C(auto) %h %Cgreen %ar %Creset%x09by \"%C(cyan ul)%an%Creset\" %x09%C(auto)%s %d'"
-alias gp="git pull origin master"
+# alias gp="git pull origin master"
 
 # docker
 alias dd='docker-compose down'
