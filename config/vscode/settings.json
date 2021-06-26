@@ -1,12 +1,15 @@
 {
   // 基本設定
   "workbench.iconTheme": "vscode-great-icons",
-  "workbench.colorTheme": "Solarized Dark",
   "editor.tabSize": 2,
-  "editor.rulers": [80],
-  "editor.wordWrapColumn": 80,
+  "editor.rulers": [
+    100
+  ],
+  "editor.wordWrapColumn": 100,
   "editor.wordWrap": "bounded",
   "editor.minimap.enabled": false,
+  "editor.minimap.scale": 3,
+  "editor.minimap.renderCharacters": false,
   "files.trimTrailingWhitespace": true,
   "explorer.confirmDelete": false,
   "git.confirmSync": false,
@@ -16,94 +19,166 @@
   "explorer.confirmDragAndDrop": false,
   "editor.acceptSuggestionOnEnter": "off",
   "editor.scrollBeyondLastLine": false,
-  "editor.padding.bottom": 100,
-  "window.zoomLevel": -1, // 拡大率
-  "editor.fontSize": 15, //  文字サイズ
+  "editor.padding.bottom": 100, // 拡大率
+  // "editor.fontSize": 15, //  文字サイズ: home
+  "editor.fontSize": 13, //  文字サイズ: outdoor
   "editor.lineHeight": 20, // 行間
-  "editor.quickSuggestionsDelay": 1, // 予測変換が出る時間[ms]
+  "editor.quickSuggestionsDelay": 100, // 予測変換が出る時間[ms]
+  "editor.formatOnSave": true,
+  "editor.scrollbar.verticalScrollbarSize": 30, // エディタースクロールバーの横幅 //グレーアウトしているが効果あるので消すな
   // "editor.snippetSuggestions": "top", //snippetは予測変換の上に出る タグとか使いにくくなった
   "editor.suggest.snippetsPreventQuickSuggestions": false, //スニペットは邪魔しない
-
+  "editor.renderLineHighlight": "all",
+  "editor.cursorBlinking": "smooth",
   // eslint, prettier
   "eslint.packageManager": "yarn",
-  "vetur.format.defaultFormatter.js": "prettier-eslint",
-  "[vue]": { // 小文字じゃないとだめ！！！
-    "editor.formatOnPaste": true,
-    "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": true
-    },
+  // こいつ悪さしやすいから気をつけろ
+  "eslint.workingDirectories": [
+    "/Users/kenya/dev/firechief-web/partial/center/", // workingディレクトリでeslintの設定ファイルを上書きすべきかも。
+    "/Users/kenya/dev/firechief-web/shared/", // workingディレクトリでeslintの設定ファイルを上書きすべきかも。
+    "/Users/kenya/dev/firechief/" // workingディレクトリでeslintの設定ファイルを上書きすべきかも。
+    // "/Users/kenya/dev/typescript-node-base/"
+    // "${workspaceFolder}"
+  ],
+  // 消す。.prettierrc毎回作成してそれ使う。このファイルにはデフォルトのファイルを書く。
+  // "prettier.jsxSingleQuote": true,
+  // "prettier.singleQuote": true,
+  // "prettier.useTabs": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
   },
   "[javascript]": {
-    "editor.formatOnPaste": true,
-    "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": true
-    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "vetur.validation.template": false,
-  "eslint.workingDirectories": [
-    "./front" // userから消す
-  ],
-
-  // rubocop
-
-  // このruby.lintをonにすると、警告メッセージが二重に表示される。
-  // "ruby.lint": {
-  //   "rubocop": true
-  // },
-
-  // "ruby.format": "rubocop",
-  "[ruby]": {
-    "editor.formatOnSave": true,
-    "editor.defaultFormatter": "misogi.ruby-rubocop"
+  "[typescript]": {
+    // "esbenp.prettier-vscode"にすると直す部分がめっちゃ増える。こっちに変えたほうがいい気はする。
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  // userから消す
-  "ruby.rubocop.configFilePath": "/Users/kenya/auto_schedule/back/.rubocop.yml",
-
-  // erb
-  "files.associations": {
-    "*.erb": "erb",
+  "[javascriptreact]": {
+    // "esbenp.prettier-vscode"にすると直す部分がめっちゃ増える。こっちに変えたほうがいい気はする。
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "emmet.includeLanguages": {
-    "erb": "html"
+  "[typescriptreact]": {
+    // "esbenp.prettier-vscode"にすると直す部分がめっちゃ増える。こっちに変えたほうがいい気はする。
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
   "[markdown]": {
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.quickSuggestions": true,
+    "editor.quickSuggestions": true
   },
-
   // spell check
   "cSpell.userWords": [
+    "activerecord",
+    "axios",
     "csrf",
+    "downcase",
+    "esport",
+    "firestore",
     "ipadic",
     "mariadb",
     "mecab",
+    "mercari",
+    "mouseleave",
+    "msickpaler",
     "natto",
     "neologd",
+    "newbee",
+    "numpy",
     "nuxt",
+    "nuxtjs",
+    "omniauth",
+    "predeploy",
+    "prepend",
+    "railtie",
+    "readonly",
+    "rgba",
+    "securerandom",
+    "tanuki",
+    "touchstart",
+    "typeof",
     "unprocessable",
+    "vuetify",
     "vuex"
-  ],
-  "cSpell.enableFiletypes": [
-    "!c",
-    "!cpp",
-    "!csharp",
-    "!jade",
-    "!latex",
-    "!less",
-    "!php",
-    "!plaintext",
-    "!pug",
-    "!python",
-    "!restructuredtext",
-    "!rust",
-    "!scala",
-    "ruby",
-    "sql",
-    "vue"
   ],
   "cSpell.language": "en",
   "gitlens.views.repositories.files.layout": "tree",
-
+  "workbench.startupEditor": "none",
+  "workbench.colorTheme": "Monokai",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "[css]": {
+    "editor.defaultFormatter": "HookyQR.beautify"
+  },
+  "customizeUI.stylesheet": {
+    ".tabs-and-actions-container .editor-actions": "display: none !important; position: absolute; top: 35px; right: 0; z-index: 1; background-color: #2D2D2D;",
+    ".tabs-and-actions-container:hover .editor-actions": "display: flex !important;",
+    ".title.tabs.show-file-icons": "overflow: unset !important;"
+  },
+  "javascript.preferences.importModuleSpecifier": "non-relative",
+  "react-native.packager.port": 19001,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "prettier.printWidth": 100,
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  "window.zoomLevel": -2,
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  },
+  // コメントの色付け
+  "better-comments.tags": [
+    {
+      "tag": "!",
+      "color": "#FF2D00",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "?",
+      "color": "#3498DB",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "todo",
+      "color": "#FF6928",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "fixme",
+      "color": "#FF2D00",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "*",
+      "color": "#98C379",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    }
+  ],
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
+  // "editor.quickSuggestions": true
 }
