@@ -37,10 +37,6 @@ bindkey "^n" history-beginning-search-forward-end
 # デフォルトエディタの設定
 export EDITOR=vim
 
-# iterm
-# alias fin='a="Finale"; echo ${a:l}'
-alias fin='echo finale'
-
 # docker
 alias dd='docker-compose down'
 alias di='docker images'
@@ -51,20 +47,7 @@ alias dcpr='docker container prune'
 alias d-c='docker-compose'
 
 # git
-alias gcd="git checkout develop"
 alias glt="git log --graph --pretty=format:'%x09%C(auto) %h %Cgreen %ar %Creset%x09by \"%C(cyan ul)%an%Creset\" %x09%C(auto)%s %d'"
-alias gp="git pull upstream develop"
-
-# yarn
-alias ys='yarn start'
-alias yd='yarn dev'
-alias yt='yarn test'
-
-# fire-chief
-alias cdweb='cd /Users/kenya/dev/firechief-web'
-alias cdcen='cd /Users/kenya/dev/firechief-web/partial/center'
-alias cdshared='cd /Users/kenya/dev/firechief-web/shared'
-alias cdapp='cd /Users/kenya/dev/firechief'
 
 alias ls='gls --color=auto'
 alias lsd='ls -d */'
